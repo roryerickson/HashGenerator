@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Online MD5|SHA1 Hash Generator For File And Text</title>
+
+<meta name="description"
+	content="Generate the MD5 and SHA1 checksum for any file or string in your browser without uploading it, quickly and efficiently, no software installation required.">
+<meta name="keywords"
+	content="MD5, SHA1, SHA256, Online MD5 Hash Generator, MD5 Hash Calculator, MD5 Checker, MD5 Creator, MD5 Encoder, MD5 Converter, MD5 
+Checksum Verifier, Generate MD5, Create MD5, Compute MD5, Calculate MD5, MD5 Generator and Verifier for Windows 7, Windows 8, Windows XP, Mac OS X, Android 
+and Linux, MD5 Hasher Plugin|Extension|Add-on for FireFox, Chrome and Opera, Tool, Software, Freeware, App, Application, Utility">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/pajhome_md5.js"></script>
+<script type="text/javascript" src="js/pajhome_sha1.js"></script>
+<script type="text/javascript" src="js/pajhome_sha256.js"></script>
+<script type="text/javascript" src="js/crypto.js"></script>
+</head>
+
+<body>
+	<div id="main">
+
+		<div id="LogoImg" class="logo">
+			<a id="logoimg" href="index.html" title="HashGenerator.ORG">HashGenerator.ORG</a>
+		</div>
+
+
+		<div id="MD5FileDiv" class="fieldset">
+
+			<div class="legend blueBackground">
+				<div class="IcoSprite IcoFile"></div>
+				MD5 &amp; SHA1 Hash Generator For File
+			</div>
+
+			<div class="tips_text tips_text1" id="HashFile">
+				<div id="result">Generate and verify the MD5/SHA1 checksum of
+					a file without uploading it.</div>
+
+				<input type="file" id="files" name="files[]">
+				<div id="drop_zone"
+					onclick="document.getElementById(&#39;files&#39;).click();return false;">Click
+					to select a file, or drag and drop it here( max: 4GB ).</div>
+
+				<div id="file_info">
+
+					<div id="file_name" class="line">
+						<div class="lineLeft">Filename:</div>
+						<div id="file_name_label" class="lineRight">No File Selected</div>
+					</div>
+
+
+					<div id="file_size" class="line">
+						<div class="lineLeft">File size:</div>
+						<div id="file_size_label" class="lineRight">0 Bytes</div>
+					</div>
+
+
+					<div id="checksum_type" class="line">
+						<div class="lineLeft">Checksum type:</div>
+						<div class="lineRight">
+							<input type="radio" class="radiobtn" name="checksum_type_"
+								id="md5" value="0" checked="true" onclick="rC();">MD5 <input
+								type="radio" class="radiobtn marginleft6px"
+								name="checksum_type_" id="sha1" value="1" onclick="rC();">SHA1
+							<input type="radio" class="radiobtn marginleft6px"
+								name="checksum_type_" id="sha256" value="2" onclick="rC();">SHA-256
+						</div>
+					</div>
+
+
+					<div id="file_checksum" class="line">
+						<div class="lineLeft">File checksum:</div>
+						<input type="text" class="hash_string_text" id="hash_string"
+							onclick="SelectAll(&#39;hash_string&#39;);">
+					</div>
+
+					<div id="compare_with" class="line">
+						<div class="lineLeft">Compare with:</div>
+						<input type="text" class="hash_string_text" id="hash_string2"
+							onclick="SelectAll(&#39;hash_string2&#39;);" onchange="c_P(); "
+							onkeyup="c_P();">
+						<div id="compare_ico"></div>
+					</div>
+
+
+
+					<div id="progress_box" class="line">
+						<div class="lineLeft" id="ProcessDiv">Process:</div>
+						<div id="progress_bar">
+							<div id="percent"></div>
+							<div id="percentText"></div>
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+				<div id="Buttons">
+					<input class="Btn" type="button" id="CompareBtn" onclick="c_P();"
+						value="Compare"> <input class="Btn" type="button"
+						id="pauseBtn" onclick="pP();" value="Pause"> <input
+						class="Btn" type="button" onclick="aR();" value="Stop">
+				</div>
+
+
+			</div>
+
+		</div>
+
+
+
+
+
+		<div id="MD5StringDiv" class="fieldset margintop10px">
+
+			<div class="legend redBackground">
+				<div class="IcoSprite IcoText"></div>
+				MD5 &amp; SHA1 Hash Generator For Text
+			</div>
+
+			<div class="tips_text tips_text1">
+				<div id="result">Generate the hash of the string you input.</div>
+
+				<textarea id="texts" rows="2" cols="20" onkeyup="v3X_();"></textarea>
+
+
+				<div id="file_info">
+
+					<div id="checksum_type2" class="line">
+						<div class="lineLeft">Checksum type:</div>
+						<div class="lineRight">
+							<input type="radio" class="radiobtn" name="checksum_type_2"
+								id="md52" value="0" checked="true" onclick="v3X_();">MD5
+							<input type="radio" class="radiobtn marginleft6px"
+								name="checksum_type_2" id="sha12" value="1" onclick="v3X_();">SHA1
+							<input type="radio" class="radiobtn marginleft6px"
+								name="checksum_type_2" id="sha2562" value="2" onclick="v3X_();">SHA-256
+						</div>
+					</div>
+
+
+					<div id="text_checksum" class="line">
+						<div class="lineLeft">String hash:</div>
+						<input type="text" class="hash_string_text" id="hash_string3"
+							onclick="SelectAll(&#39;hash_string3&#39;);">
+					</div>
+
+				</div>
+				<!--end textinfo-->
+
+				<div id="Buttons">
+					<input class="Btn" type="button" id="CalcHashForTexts"
+						onclick="v3X_();" value="Calculate">
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<div id="LinksDiv" class="fieldset margintop10px marginbottom10px">
+
+			<div style="text-align: center; margin: 20px 0 0 3px;">
+				<p>
+					Copyright © 2012 - 2013 <a href="./index_files/index.html"
+						title="MD5 Hash Generator">OnlineMD5</a>. All Rights Reserved.
+				</p>
+				<p></p>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+
+	<script type="text/javascript" src="js/calc.js"></script>
+
+
+</body>
+</html>
