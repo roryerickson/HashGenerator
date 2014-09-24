@@ -115,12 +115,12 @@
 
 .blueBackground
 {
-	background: url(images/blue.png) repeat-x 0 0;
+	background: url(/images/blue.png) repeat-x 0 0;
 }
 
 .redBackground
 {
-	background: url(images/blue.png) repeat-x 0 0;
+	background: url(/images/blue.png) repeat-x 0 0;
 }
 
 #MD5FileDiv
@@ -140,7 +140,7 @@
 	height:24px;
 	margin: -3px 0 0 0;
 	padding: 0 7px 0 0;
-	background: url(images/sprite4.png) no-repeat;
+	background: url(/images/sprite4.png) no-repeat;
 }
 
 .IcoPos
