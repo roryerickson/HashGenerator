@@ -218,6 +218,8 @@ function rC() {
 			}
 		}
 	}
+
+	// Default
 	s5z = "/js/MD5_worker.js";
 	switch (b) {
 	case 1:
