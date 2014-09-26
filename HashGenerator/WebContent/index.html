@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Online MD5|SHA1 Hash Generator For File And Text</title>
+<title>HashGenerator.ORG</title>
 
 <meta name="description"
 	content="Generate the MD5, SHA1 and SHA256 checksum for any file in your browser without any plugins.  Create a hash from any text string right from your browser.">
@@ -15,105 +15,27 @@
 <script type="text/javascript" src="js/pajhome_md5.js"></script>
 <script type="text/javascript" src="js/pajhome_sha1.js"></script>
 <script type="text/javascript" src="js/pajhome_sha256.js"></script>
-<script type="text/javascript" src="js/crypto.js"></script>
+<script type="text/javascript" src="js/calc.js"></script>
+
+<!--  <script type="text/javascript" src="js/crypto.js"></script> -->
+
 </head>
 
 <body>
 	<div id="main">
 
-		<div id="MD5FileDiv" class="fieldset">
-
-<!-- 			<div class="table_header">
-				MD5, SHA1 and SHA256 Hash Generator For File
-			</div>
-
-			<div class="tips_text tips_text1" id="HashFile">
-				<div id="result">Generate and verify the MD5/SHA1 checksum of
-					a file without uploading it.</div>
-
-				<input type="file" id="files" name="files[]">
-				<div id="drop_zone"
-					onclick="document.getElementById(&#39;files&#39;).click();return false;">Click
-					to select a file, or drag and drop it here.</div>
-
-				<div id="file_info">
-
-					<div id="file_name" class="line">
-						<div class="lineLeft">Filename:</div>
-						<div id="file_name_label" class="lineRight">No File Selected</div>
-					</div>
-
-					<div id="file_size" class="line">
-						<div class="lineLeft">File size:</div>
-						<div id="file_size_label" class="lineRight">0 Bytes</div>
-					</div>
-
-					<div id="checksum_type" class="line">
-						<div class="lineLeft">Checksum type:</div>
-						<div class="lineRight">
-							<input type="radio" class="radiobtn" name="checksum_type_"
-								id="md5" value="0" checked="true" onclick="rC();">MD5 <input
-								type="radio" class="radiobtn marginleft6px"
-								name="checksum_type_" id="sha1" value="1" onclick="rC();">SHA1
-							<input type="radio" class="radiobtn marginleft6px"
-								name="checksum_type_" id="sha256" value="2" onclick="rC();">SHA-256
-						</div>
-					</div>
-
-
-					<div id="file_checksum" class="line">
-						<div class="lineLeft">File checksum:</div>
-						<input type="text" class="hash_string_text" id="hash_string"
-							onclick="SelectAll(&#39;hash_string&#39;);">
-					</div>
-
-					<div id="compare_with" class="line">
-						<div class="lineLeft">Compare with:</div>
-						<input type="text" class="hash_string_text" id="hash_string2"
-							onclick="SelectAll(&#39;hash_string2&#39;);" onchange="c_P(); "
-							onkeyup="c_P();">
-						<div id="compare_ico"></div>
-					</div>
-
-
-
-					<div id="progress_box" class="line">
-						<div class="lineLeft" id="ProcessDiv">Process:</div>
-						<div id="progress_bar">
-							<div id="percent"></div>
-							<div id="percentText"></div>
-						</div>
-					</div>
-
-				</div>
-
-				<div id="Buttons">
-					<input class="Btn" type="button" id="CompareBtn" onclick="c_P();"
-						value="Compare"> <input class="Btn" type="button"
-						id="pauseBtn" onclick="pP();" value="Pause"> <input
-						class="Btn" type="button" onclick="aR();" value="Stop">
-				</div>
-
-
-			</div>
-
-		</div>
- -->
-
-
-
-
 		<div id="MD5StringDiv" class="fieldset margintop10px">
 
-			<div class="table_header">
-				<div class="IcoSprite IcoText"></div>
+			<div class="section_header">
+			<div class="section_header_text">
 				MD5, SHA1 and SHA256 Hash Generator For Text
+			</div>
 			</div>
 
 			<div class="tips_text tips_text1">
 				<div id="result">Input plain text here to be hashed.</div>
 
-				<textarea id="texts" rows="2" cols="20" onkeyup="v3X_();"></textarea>
+				<textarea id="texts" rows="2" cols="20" onkeyup="selectHash();"></textarea>
 
 
 				<div id="file_info">
@@ -121,27 +43,22 @@
 					<div id="checksum_type2" class="line">
 						<div class="lineLeft">Checksum type:</div>
 						<div class="lineRight">
-							<input type="radio" class="radiobtn" name="checksum_type_2"
-								id="md52" value="0" checked="true" onclick="v3X_();">MD5
-							<input type="radio" class="radiobtn marginleft6px"
-								name="checksum_type_2" id="sha12" value="1" onclick="v3X_();">SHA1
-							<input type="radio" class="radiobtn marginleft6px"
-								name="checksum_type_2" id="sha2562" value="2" onclick="v3X_();">SHA-256
+							<input type="radio" class="radiobtn" name="checksum_type_2" id="md5_hash" value="0" checked="true" onclick="selectHash();">MD5
+							<input type="radio" class="radiobtn marginleft6px" name="checksum_type_2" id="sha1_hash" value="1" onclick="selectHash();">SHA1
+							<input type="radio" class="radiobtn marginleft6px" name="checksum_type_2" id="sha256_hash" value="2" onclick="selectHash();">SHA-256
 						</div>
 					</div>
 
 
 					<div id="text_checksum" class="line">
 						<div class="lineLeft">String hash:</div>
-						<input type="text" class="hash_string_text" id="hash_string3"
-							onclick="SelectAll(&#39;hash_string3&#39;);">
+						<input type="text" class="hash_string_text" id="hash_string3" onclick="SelectAll(&#39;hash_string3&#39;);">
 					</div>
 
 				</div>
 
 				<div id="Buttons">
-					<input class="Btn" type="button" id="CalcHashForTexts"
-						onclick="v3X_();" value="Calculate">
+					<input class="Btn" type="button" id="CalcHashForTexts" onclick="v3X_();" value="Calculate">
 				</div>
 
 
@@ -163,9 +80,7 @@
 
 	</div>
 
-
-
-	<script type="text/javascript" src="js/calc.js"></script>
+	
 
 
 </body>

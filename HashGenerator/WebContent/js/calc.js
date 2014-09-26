@@ -302,25 +302,25 @@ function c_P() {
 	}
 }
 
-function v3X_() {
+function selectHash() {
+	var a = "";
 	var c = document.getElementById("texts").value;
 	if (c.length == 0) {
 		document.getElementById("hash_string3").value = "";
 		return
 	}
 	var b = 1;
-	if (document.getElementById("md52").checked) {
+	if (document.getElementById("md5_hash").checked) {
 		b = 1
 	} else {
-		if (document.getElementById("sha12").checked) {
+		if (document.getElementById("sha1_hash").checked) {
 			b = 2
 		} else {
-			if (document.getElementById("sha2562").checked) {
+			if (document.getElementById("sha256_hash").checked) {
 				b = 3
 			}
 		}
 	}
-	var a = "";
 	if (b == 1) {
 		a = hex_md5(c)
 	} else {
@@ -337,4 +337,4 @@ function v3X_() {
 C5();
 ae1();
 document.getElementById("md5").checked = true;
-document.getElementById("md52").checked = true;
+document.getElementById("md5_hash").checked = true;
