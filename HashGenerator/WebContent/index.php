@@ -24,12 +24,18 @@
 <body>
 	<div id="main">
 
+	<div id="header_box">
+	<div id="header_bar">
+		<H1>HashGenerator.ORG</H1>
+	</div>
+</div>
+	
+	
 		<div id="MD5StringDiv" class="fieldset margintop10px">
 
 			<div class="section_header">
-			<div class="section_header_text">
-				MD5, SHA1 and SHA256 Hash Generator For Text
-			</div>
+				<div class="section_header_text">MD5, SHA1 and SHA256 Hash Generator
+					For Text</div>
 			</div>
 
 			<div class="tips_text tips_text1">
@@ -43,22 +49,28 @@
 					<div id="checksum_type2" class="line">
 						<div class="lineLeft">Checksum type:</div>
 						<div class="lineRight">
-							<input type="radio" class="radiobtn" name="checksum_type_2" id="md5_hash" value="0" checked="true" onclick="selectHash();">MD5
-							<input type="radio" class="radiobtn marginleft6px" name="checksum_type_2" id="sha1_hash" value="1" onclick="selectHash();">SHA1
-							<input type="radio" class="radiobtn marginleft6px" name="checksum_type_2" id="sha256_hash" value="2" onclick="selectHash();">SHA-256
+							<input type="radio" class="radiobtn" name="checksum_type_2"
+								id="md5_hash" value="0" checked="true" onclick="selectHash();">MD5
+							<input type="radio" class="radiobtn marginleft6px"
+								name="checksum_type_2" id="sha1_hash" value="1"
+								onclick="selectHash();">SHA1 <input type="radio"
+								class="radiobtn marginleft6px" name="checksum_type_2"
+								id="sha256_hash" value="2" onclick="selectHash();">SHA-256
 						</div>
 					</div>
 
 
 					<div id="text_checksum" class="line">
 						<div class="lineLeft">String hash:</div>
-						<input type="text" class="hash_string_text" id="hash_string3" onclick="SelectAll(&#39;hash_string3&#39;);">
+						<input type="text" class="hash_string_text" id="hash_string3"
+							onclick="SelectAll(&#39;hash_string3&#39;);">
 					</div>
 
 				</div>
 
 				<div id="Buttons">
-					<input class="Btn" type="button" id="CalcHashForTexts" onclick="v3X_();" value="Calculate">
+					<input class="Btn" type="button" id="CalcHashForTexts"
+						onclick="v3X_();" value="Calculate">
 				</div>
 
 
@@ -69,9 +81,7 @@
 		<div id="LinksDiv" class="fieldset margintop10px marginbottom10px">
 
 			<div style="text-align: center; margin: 20px 0 0 3px;">
-				<p>
-					Footer text
-				</p>
+				<p>Footer text</p>
 				<p></p>
 			</div>
 		</div>
@@ -80,7 +90,7 @@
 
 	</div>
 
-	
+
 
 
 </body>
