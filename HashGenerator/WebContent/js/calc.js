@@ -306,7 +306,7 @@ function selectHash() {
 	var a = "";
 	var c = document.getElementById("texts").value;
 	if (c.length == 0) {
-		document.getElementById("hash_string3").value = "";
+		document.getElementById("hash_result").value = "";
 		return
 	}
 	var b = 1;
@@ -331,7 +331,7 @@ function selectHash() {
 		}
 	}
 	a = a.toUpperCase();
-	document.getElementById("hash_string3").value = a
+	document.getElementById("hash_result").value = a
 }
 
 C5();

@@ -281,5 +281,32 @@
 }
 
 #header_box {
-	background-color:#000000;
+	border: 1px solid #cccccd;
+	border-radius: 3px 3px;
+	background-image: -webkit-linear-gradient(273deg, rgb(252, 252, 252), rgb(247, 247, 247) 3%, rgb(242, 242, 242) 12%, rgb(232, 232, 232) 90%, rgb(220, 220, 220));
+	margin: 0px auto 3px auto;
+	padding: 0 0 10px 0;
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+#header_text {
+	margin: 10px;
+}
+
+#header_text h1, h2, h3, h4 {
+	color: #000000;
+	text-shadow: 1px 1px 2px #C0C0C0;
+}
+
+#content_box {
+	border: 1px solid #cccccd;
+	border-radius: 3px 3px;
+	background-image: -webkit-linear-gradient(273deg, rgb(252, 252, 252), rgb(247, 247, 247) 3%, rgb(242, 242, 242) 12%, rgb(232, 232, 232) 90%, rgb(220, 220, 220));
+	margin: 0px auto 3px auto;
+	padding: 0 0 10px 0;
+	width: 100%;
+	position: relative;
+	float: left;
 }

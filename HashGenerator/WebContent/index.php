@@ -24,70 +24,61 @@
 <body>
 	<div id="main">
 
-	<div id="header_box">
-	<div id="header_bar">
-		<H1>HashGenerator.ORG</H1>
-	</div>
-</div>
-	
-	
-		<div id="MD5StringDiv" class="fieldset margintop10px">
+		<div id="header_box">
+			<div id="header_text">
+				<H1>HashGenerator.ORG</H1>
+			</div>
+		</div>
 
-			<div class="section_header">
-				<div class="section_header_text">MD5, SHA1 and SHA256 Hash Generator
-					For Text</div>
+
+		<div id="content_box">
+
+			<div id="header_text">
+				<h3>MD5, SHA1 and SHA256 Hash Generator For Text</h3>
 			</div>
 
-			<div class="tips_text tips_text1">
-				<div id="result">Input plain text here to be hashed.</div>
 
+			<div id="header_text">
+				<h4>Input plain text here to be hashed:</h4>
+			</div>
+
+			<div id="input_box">
 				<textarea id="texts" rows="2" cols="20" onkeyup="selectHash();"></textarea>
+			</div>
+		
+			<div id="file_info">
 
-
-				<div id="file_info">
-
-					<div id="checksum_type2" class="line">
-						<div class="lineLeft">Checksum type:</div>
-						<div class="lineRight">
-							<input type="radio" class="radiobtn" name="checksum_type_2"
-								id="md5_hash" value="0" checked="true" onclick="selectHash();">MD5
-							<input type="radio" class="radiobtn marginleft6px"
-								name="checksum_type_2" id="sha1_hash" value="1"
-								onclick="selectHash();">SHA1 <input type="radio"
-								class="radiobtn marginleft6px" name="checksum_type_2"
-								id="sha256_hash" value="2" onclick="selectHash();">SHA-256
-						</div>
+				<div id="checksum_type2" class="line">
+					<div class="lineLeft">Checksum type:</div>
+					<div class="lineRight">
+						<input type="radio" class="radiobtn" name="checksum_type_2" id="md5_hash" value="0" checked="checked" onclick="selectHash();">MD5
+						<input type="radio" class="radiobtn" name="checksum_type_2" id="sha1_hash" value="1" onclick="selectHash();">SHA1
+						<input type="radio" class="radiobtn" name="checksum_type_2" id="sha256_hash" value="2" onclick="selectHash();">SHA-256
 					</div>
-
-
-					<div id="text_checksum" class="line">
-						<div class="lineLeft">String hash:</div>
-						<input type="text" class="hash_string_text" id="hash_string3"
-							onclick="SelectAll(&#39;hash_string3&#39;);">
-					</div>
-
-				</div>
-
-				<div id="Buttons">
-					<input class="Btn" type="button" id="CalcHashForTexts"
-						onclick="v3X_();" value="Calculate">
 				</div>
 
 
+				<div id="text_checksum" class="line">
+					<div class="lineLeft">String hash:</div>
+					<input type="text" class="hash_string_text" id="hash_result" onclick="SelectAll('hash_result');">
+				</div>
+
 			</div>
-		</div>
 
-
-		<div id="LinksDiv" class="fieldset margintop10px marginbottom10px">
-
-			<div style="text-align: center; margin: 20px 0 0 3px;">
-				<p>Footer text</p>
-				<p></p>
+			<div id="Buttons">
+				<input class="Btn" type="button" id="CalcHashForTexts" onclick="selectHash();" value="Calculate">
 			</div>
+
+
 		</div>
+	</div>
 
 
+	<div id="LinksDiv" class="fieldset margintop10px marginbottom10px">
 
+		<div style="text-align: center; margin: 20px 0 0 3px;">
+			<p>Footer text</p>
+		</div>
 	</div>
 
 
